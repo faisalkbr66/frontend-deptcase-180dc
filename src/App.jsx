@@ -1,12 +1,13 @@
 // src/App.jsx
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Register from './pages/Register';
+import Login from './pages/Login';
 
-// Mock halaman login untuk demonstrasi alur redirect
-const LoginMock = () => (
+// Mock halaman Products
+const ProductsMock = () => (
   <div style={{ textAlign: 'center', marginTop: '50px' }}>
-    <h2>Halaman Login</h2>
-    <p>Anda berhasil diarahkan ke sini setelah registrasi.</p>
+    <h2>Halaman Products (Dashboard)</h2>
+    <p> Ini adalah halaman Products Mock.</p>
   </div>
 );
 
@@ -19,7 +20,8 @@ function App() {
         
         {/* Rute Utama */}
         <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<LoginMock />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/products" element={<ProductsMock />} />
       </Routes>
     </BrowserRouter>
   );
